@@ -254,3 +254,46 @@ body {
     background: rgba(255,255,255,0.05);
     padding: 10px;
 }
+
+.sessao-contato {
+    width: 70%;
+    margin: auto;
+    padding: 60px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.sessao-contato h1 {
+    font-size: 64px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sessao-contato a {
+    color: #d8d8d8;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.botoes-contato {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botoes-contato a,
+.cta-button {
+    padding: 14px 28px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+    background: rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.contact-buttons a:hover,
+.cta-button:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.2);
+}
