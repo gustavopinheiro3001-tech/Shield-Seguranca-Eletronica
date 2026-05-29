@@ -261,6 +261,12 @@ body {
     height: 85px;
     text-align: center;
     gap: 20px;
+    flex-wrap: wrap; /*faz com que as marcas fiquem responsivas fazendo q as imagens não fiquem espremidas*/
+}
+.marcas img{
+    width: 100%;
+    max-width: 100px;
+    height: auto;
 }
 .sessao-contato {
     width: 70%;
