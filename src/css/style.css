@@ -257,10 +257,10 @@ body {
 .marcas {
     width: 100%;
     display: flex;
+    justify-content: center;
     width: 100%;
-    height: 85px;
-    text-align: center;
-    gap: 20px;
+    height: 80px;
+    gap: 25px;
     flex-wrap: wrap; /*faz com que as marcas fiquem responsivas fazendo q as imagens não fiquem espremidas*/
 }
 .marcas img{
