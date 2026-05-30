@@ -263,6 +263,15 @@ body {
     gap: 25px;
     flex-wrap: wrap; /*faz com que as marcas fiquem responsivas fazendo q as imagens não fiquem espremidas*/
 }
+
+.marcas p {
+    font-size: 18px;
+    color: #00bfff;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
 .marcas img{
     width: 100%;
     max-width: 100px;
