@@ -1,13 +1,25 @@
 const form = document.getElementById("formContato");
-const resposta = document.getElementById("resposta");
 
 form.addEventListener("submit", function(event) {
+
     event.preventDefault();
 
     const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const texto = document.getElementById("mensagem").value;
 
-    resposta.innerHTML =
-     `Mensagem enviada com sucesso! Obrigado pelo contato, ${nome}.`;
+    const mensagem =
+`Olá, meu nome é ${nome}
 
-    form.reset();
+Email: ${email}
+
+Mensagem:
+${texto}`;
+
+    const url =
+`https://wa.me/5585988618045?text=${encodeURIComponent(mensagem)}`;
+
+    console.log(url);
+
+    window.location.href = url;
 });
