@@ -6,7 +6,8 @@ form.addEventListener("submit", function(event) {
 
     const nome = document.getElementById("nome").value;
 
-    resposta.innerHTML = `Mensagem enviada com sucesso! Obrigado pelo contato, ${nome}.`;
+    resposta.innerHTML =
+     `Mensagem enviada com sucesso! Obrigado pelo contato, ${nome}.`;
 
     form.reset();
 });

@@ -277,16 +277,39 @@ body {
     max-width: 100px;
     height: auto;
 }
+
+
 .sessao-contato {
-    width: 70%;
-    margin: auto;
-    padding: 60px;
-    border-radius: 30px;
+    width: min(90%, 1100px);
+
+    margin: 60px auto;
+
+    padding: 60px 40px;
+
+    border-radius: 40px;
+
     text-align: center;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.contato-info {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-top: 40px;
 }
 
 .sessao-contato h1 {
-    font-size: 64px;
+    font-size: clamp(28px, 5vw, 64px);
     color: white;
     margin-bottom: 20px;
 }
@@ -314,50 +337,125 @@ body {
     transition: 0.3s;
 }
 
-.contact-buttons a:hover,
+.botoes-contato a:hover,
 .cta-button:hover {
     transform: translateY(-3px);
     background: rgba(255,255,255,0.2);
 }
 
-h2 {
-    color: #000000fe;
+@media (max-width: 768px) {
+
+    .sessao-contato {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .sessao-contato h1 {
+        font-size: 36px;
+    }
+
+    .sessao-contato p,
+    .sessao-contato a {
+        font-size: 16px;
+    }
+
+    .contato-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .caixa-contato {
+        width: 100%;
+        max-width: 650x;
+        margin: 20px 0 auto;
+    }
+
+    .caixa-contato input,
+    .caixa-contato textarea,
+    .caixa-contato button {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
-.caixa-contato {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f5f5f5;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.caixa-contato h2 {
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+.caixa-contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .caixa-contato input,
 .caixa-contato textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.caixa-contato input::placeholder,
+.caixa-contato textarea::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.caixa-contato textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.caixa-contato input:focus,
+.caixa-contato textarea:focus {
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 0 15px rgba(255,255,255,0.15);
 }
 
 .caixa-contato button {
     width: 100%;
-    padding: 10px;
-    background-color: #0056b3;
-    color: rgb(255, 255, 255);
+
+    padding: 16px;
+
     border: none;
-    border-radius: 5px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #1f9eff,
+        #1478c9
+    );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
     cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 8px 20px rgba(31, 158, 255, 0.35);
 }
 
 .caixa-contato button:hover {
-    background-color: #000281;
+   transform: translateY(-3px);
+
+    box-shadow: 0 12px 25px rgba(31, 158, 255, 0.5);
 }
 
 #resposta {
-    color: black;
-    margin-top: 15px;
-    font-weight: bold;
+    margin-top: 20px;
+    color: #90EE90;
+    font-weight: 600;
 }
