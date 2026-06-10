@@ -19,7 +19,5 @@ ${texto}`;
     const url =
 `https://wa.me/5585988618045?text=${encodeURIComponent(mensagem)}`;
 
-    console.log(url);
-
     window.location.href = url;
 });
